@@ -1,0 +1,40 @@
+
+h3 {
+  margin-left: 5rem;
+}
+
+ul {
+  margin-right: 3rem;
+}
+
+.navbar {
+  background-color: #817d7d;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0c0c0c;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar ul li.active a {
+  color: #fff;
+}
+
+span {
+  margin-right: 2rem;
+}
+

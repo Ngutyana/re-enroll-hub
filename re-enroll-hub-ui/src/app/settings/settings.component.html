@@ -1,0 +1,46 @@
+<div class="container-application">
+  <h2>Settings</h2>
+  <p>{{ status }}</p>
+
+  <form #studentForm="ngForm">
+    <div class="form-group">
+      <label for="name">Student name:</label>
+      <input id="name" class="form-control" disabled [value]="student.name">
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Student surname:</label>
+      <input id="surname" class="form-control" disabled [value]="student.surname">
+    </div>
+
+    <div class="form-group">
+      <label for="contactNumber">Student contact number:</label>
+      <input id="contactNumber" class="form-control" name="contactNumber" [(ngModel)]="student.contactNumber" [value]="student.contactNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Student email:</label>
+      <input id="email" class="form-control" disabled [value]="student.email">
+    </div>
+
+    <div class="form-group">
+      <label for="altEmail">Student altEmail:</label>
+      <input id="altEmail" class="form-control"  name="altEmail" [(ngModel)]="student.altEmail" [value]="student.altEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="university">University:</label>
+      <input id="university" class="form-control" disabled [value]="student.university">
+    </div>
+
+    <div class="form-group">
+      <label for="address">Student address:</label>
+      <textarea id="address" class="form-control"  name="address" [(ngModel)]="student.address" [value]="student.address"></textarea>
+    </div>
+
+    <div class="button-group">
+      <button class="btn btn-primary" (click)="updateStudent()">Save Changes</button>
+      <button [disabled]="!canCancelApplication() || isEnabled" class="btn btn-danger" (click)="cancelApplication()">Cancel Application</button>
+    </div>
+  </form>
+</div>

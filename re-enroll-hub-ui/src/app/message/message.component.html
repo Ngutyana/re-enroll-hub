@@ -1,0 +1,29 @@
+<div *ngIf="messages.length === 0; then noMessages else loadedMessages"></div>
+
+<ng-template #noMessages>
+  <div class="container-fluid no-messages-container">
+    <div class="no-messages-content">
+      <p>There are no messages in your inbox.</p>
+      <h6>Your inbox is empty.</h6>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #loadedMessages>
+  <div class="container-fluid">
+    <h2>Messages</h2>
+    <div class="container-fluid messages-container">
+      <div class="messages" *ngFor="let message of messages">
+        <div class="message-bubble {{ message.from === 'user' ? 'user-bubble' : 'other-bubble' }}">
+          <div class="message-content">
+            <p class="message-text"><i>{{ message.message }}</i></p>
+          </div>
+          <div class="message-details">
+            <small class="message-sender">From: {{ message.from }}</small>
+            <small class="message-date">Date: {{ getFormattedDate(message.date) }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

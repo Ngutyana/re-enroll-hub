@@ -1,0 +1,94 @@
+<div *ngIf="isSignedIn">
+  <!--Student profile-->
+  <div class="profile-card">
+    <img [src]="getLogo()" alt="University" class="profile-picture">
+    <div class="container-fluid">
+      <h6 class="user-name">{{student.name}} {{student.surname}}</h6>
+      <h6 class="email">{{student.email}}</h6>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isSignedIn">
+  <div class="container-application">
+    <h2>Application</h2>
+    {{ status }}
+    <div *ngIf="allowSubmission; then formApplication else notAllowed"></div>
+  </div>
+</div>
+
+<ng-template #formApplication>
+  <p class="instructions">*Attach all required documentation as evidence</p>
+
+  <form #applicationForm="ngForm" (ngSubmit)="apply(applicationForm)">
+
+    <div class="container-app-input">
+      <label for="facultyOfStudy" class="fixed-width-label">Faculty of study: *</label>
+      <select id="facultyOfStudy" name="facultyOfStudy" [(ngModel)]="applicationModel.facultyOfStudy" required>
+        <option value="" disabled selected>Select</option>
+        <option *ngFor="let faculty of faculties" [value]=faculty>{{ faculty }}</option>
+      </select>
+    </div>
+
+    <div class="container-app-input">
+      <label for="qualification" class="fixed-width-label">Qualification: *</label>
+      <select id="qualification" name="qualification" [(ngModel)]="applicationModel.qualification" required>
+        <option value="" disabled selected>Select</option>
+        <option *ngFor="let qualification of qualifications" [value]=qualification>{{ qualification }}</option>
+      </select>
+    </div>
+
+    <div class="container-app-input">
+      <label for="yearOfQual" class="fixed-width-label">Year of qualification: *</label>
+      <select id="yearOfQual" name="yearOfQual" [(ngModel)]="applicationModel.yearOfQualification" required>
+        <option value="" disabled selected>Select</option>
+        <option *ngFor="let qualificationYear of qualificationYears" [value]=qualificationYear>{{ qualificationYear }}</option>
+      </select>
+    </div>
+
+    <div class="container-app-input">
+      <label for="yearOfDeRg" class="fixed-width-label">Year of deregistration: *</label>
+      <select id="yearOfDeRg" name="yearOfDeRg" [(ngModel)]="applicationModel.yearOfDeregistration" required>
+        <option value="" disabled selected>Select</option>
+        <option *ngFor="let year of years" [value]=year>{{ year }}</option>
+      </select>
+    </div>
+
+    <div class="container-app-input">
+      <label for="reasonOfDeRg" class="fixed-width-label">Reason for deregistration: *</label>
+      <select id="reasonOfDeRg" name="reasonOfDeReg" [(ngModel)]="applicationModel.reasonOfDeregistration" required>
+        <option value="" disabled selected>Select</option>
+        <option *ngFor="let reason of reasons" [value]=reason>{{ reason }}</option>
+      </select>
+    </div>
+
+    <div class="container-app-input">
+      <label for="reasonForDeregistration" class="fixed-width-label">Story behind deregistration:</label>
+      <textarea id="reasonForDeregistration"name="reasonForDeregistration" [(ngModel)]="applicationModel.storyBehindDeregistration" required></textarea>
+    </div>
+
+    <div class="container-app-input">
+      <label for="motivation" class="fixed-width-label">Motivate why you should be approved:</label>
+      <textarea id="motivation"name="motivation" [(ngModel)]="applicationModel.motivation" required></textarea>
+    </div>
+
+    <div class="container-app-input">
+      <label class="custom-file-upload fixed-width-label">Attach all supporting documents here:
+        <input type="file" id="file" name="file" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx, .txt">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <input [disabled]="!allowSubmission" type="submit" value="Upload">
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #notAllowed>
+  <div class="container-fluid  not-allowed-container">
+    <div class="not-allowed-content">
+      <p>You submitted application is still under process.</p>
+      <h6>Check out the progress to be be updated with the outcome and also keep an eye on notifications.</h6>
+    </div>
+  </div>
+</ng-template>

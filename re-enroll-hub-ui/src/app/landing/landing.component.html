@@ -1,0 +1,33 @@
+
+<div *ngIf="isSignedIn">
+  <!--Student profile-->
+  <div class="profile-card">
+    <img [src]="getLogo()" alt="University" class="profile-picture">
+    <div class="container-fluid">
+      <h6 class="user-name">{{student.name}} {{student.surname}}</h6>
+      <h6 class="email">{{student.email}}</h6>
+    </div>
+  </div>
+</div>
+
+<div class="container-about">
+    <h4>ABOUT</h4>
+    <p>
+      This platform is an opportunity for students that deregistered during covid-19 and post-covid-19 due to the education transition, as students had gotten used to studying digitally
+      during the pandemic and having to return to face-to-face studying post covid-19. Some students were affected by the transition as they could not as their situations could not
+      accommodate them to relocate back to the cities where the institutions they were enrolled to for attending face-to-face classes and complete their studies. This platform is the centre
+      of South African Universities and students impacted to from alliances to secure the future of students in need to complete their studies but can not relocate.
+
+    </p>
+    <br>
+
+    <h4>HOW IT WORKS</h4>
+    <p>
+      Impacted students that are interested in this program will register and apply, their applications will be reviewed by the university the student is enrolled to, to check whether
+      the student meets the application requirements; if the students do meet the requirements, they will be enrolled to further their studies in the institution and be facilitated for online
+      learning. The institution will ali with another one to facilitate the student with an examination hall closer to their residential area so they may be inivigilated to ensure authenticity
+      during student examinations.
+
+    </p>
+</div>
+

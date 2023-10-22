@@ -1,0 +1,52 @@
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #e5e5ea;
+}
+
+.user-bubble {
+  align-self: flex-end;
+  background-color: #4caf50;
+  color: white;
+}
+
+.other-bubble {
+  align-self: flex-start;
+  background-color: #565a5b;
+  color: white;
+}
+
+.message-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.message-content {
+  margin: 0;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-messages-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.no-messages-content {
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}

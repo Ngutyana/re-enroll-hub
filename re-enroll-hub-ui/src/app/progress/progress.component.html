@@ -1,0 +1,17 @@
+<div class="status-progress">
+  <div *ngFor="let step of steps; let i = index" class="status-step" [ngClass]="{'active': i <= activeStatusIndex}">
+    <div class="circle"></div>
+    <div class="text">{{ step }}</div>
+  </div>
+</div>
+
+
+
+<!--
+<div class="status-progress">
+  <div *ngFor="let step of steps; let i = index" class="status-step" [ngClass]="{'active': i <= activeStatusIndex}">
+    <div class="circle"></div>
+    <div class="text">{{ step }}</div>
+  </div>
+</div>
+-->

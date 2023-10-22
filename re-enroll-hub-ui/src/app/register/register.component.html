@@ -1,0 +1,69 @@
+<div *ngIf="signInFormView; then loginTemplate else registerTemplate"></div>
+
+<ng-template #loginTemplate>
+  <div class="container">
+    <div class="signin-section">
+      <h2>Sign In</h2>
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <div class="form-group">
+          <label for="signin_email" class="fixed-width-label">Email<span class="required">*</span></label>
+          <input type="email" id="signin_email" name="email" [(ngModel)]="loginModel.email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="signin_password" class="fixed-width-label">Password <span class="required">*</span></label>
+          <input type="password" id="signin_password" name="password" [(ngModel)]="loginModel.password"  required>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="SIGN IN">
+        </div>
+      </form>
+      <p>don't have an account? <a (click)="switchForm()">register here</a></p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #registerTemplate>
+  <div class="container">
+    <div class="signup-section">
+      <h2>Create an Account</h2>
+      <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+        <div class="form-group">
+          <label for="university" class="fixed-width-label">Select University</label>
+          <select id="university" name="university" [(ngModel)]="registerModel.university" required>
+            <option value="" disabled selected>Select University</option>
+            <option *ngFor="let university of universities" [value]=university>{{ university }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="fixed-width-label">Student Email<span class="required">*</span></label>
+          <input type="email" id="email" name="email" [(ngModel)]="registerModel.email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="fixed-width-label">Password<span class="required">*</span></label>
+          <input type="password" id="password" name="password" [(ngModel)]="registerModel.password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm_password" class="fixed-width-label">Confirm Password <span class="required">*</span></label>
+          <input type="password" id="confirm_password" name="confirmPassword" [(ngModel)]="registerModel.confirmPassword" required>
+        </div>
+
+        <div class="terms">
+          <p>By signing up, you are also agreeing to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="SIGN UP">
+        </div>
+      </form>
+
+      <p>already have an account? <a (click)="switchForm()">sign in here</a></p>
+    </div>
+
+  </div>
+</ng-template>
+
