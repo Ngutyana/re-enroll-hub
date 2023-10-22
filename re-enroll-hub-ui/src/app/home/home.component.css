@@ -2,15 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 
 .container-application {
-  background-color: #fff;
+  background-color: #f7f7f7;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  width: 95%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -18,8 +18,16 @@ body {
   margin-bottom: 20px;
 }
 
+.container-app-input select{
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 250px;
+  height: 40px;
+  text-align: right;
+}
+
 textarea {
-  width: calc(100% - 150px);
+  width: 100%;
   height: 150px;
   padding: 10px;
   border-radius: 5px;
@@ -32,7 +40,7 @@ textarea {
 }
 
 .custom-file-upload label {
-  background-color: #4caf50;
+  background-color: #ff7d33;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -41,43 +49,67 @@ textarea {
 }
 
 .custom-file-upload input[type="file"]:hover + label {
-  background-color: #45a049;
+  background-color: #ff7d33;
+}
+
+.form-group input[type="submit"]:hover {
+  background: #ff5733;
 }
 
 .form-group input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  background: #ff7d33;
+  color: #fff;
+  cursor: pointer;
 }
 
 .fixed-width-label {
   display: inline-block;
+  width: 300px;
+  margin-right: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container-application p {
+  color:darkred;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.profile-picture{
   width: 200px;
-  text-align: right;
-  margin-right: 10px;
+  height: 150px;
+  border-radius: 30px;
+  padding-left: 80px;
 }
 
-.not-allowed-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
+.container-fluid-intro h6{
+  font-weight: bold;
+  padding-left: 40px;
+  font-size: 13px;
 }
 
-.not-allowed-content {
-  text-align: center;
+
+.container-fluid-intro{
+  padding-bottom: 50px;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-}
+.profile-card{
 
-img {
-  width: 2in;
-  height: 1.25in;
+  display: inline-block;
 }

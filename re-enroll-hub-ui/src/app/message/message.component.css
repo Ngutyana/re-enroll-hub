@@ -1,21 +1,22 @@
 .message-bubble {
-  max-width: 70%;
-  padding: 10px 15px;
+  max-width: 90%;
   margin: 10px;
-  border-radius: 15px;
-  background-color: #e5e5ea;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
+
 
 .user-bubble {
   align-self: flex-end;
-  background-color: #4caf50;
-  color: white;
+  color: #f7f7f7;
+
 }
 
 .other-bubble {
   align-self: flex-start;
-  background-color: #565a5b;
-  color: white;
+  color:#0c0c0c;
+
 }
 
 .message-details {
@@ -28,10 +29,7 @@
   margin: 0;
 }
 
-.messages-container {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .no-messages-container {
   display: flex;
@@ -46,7 +44,27 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  background-color: #fff;
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  text-align: left;
+  padding-left: 150px;
+  font-weight: bold;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 40px;
+  border-radius: 10px;
+  margin: 50px auto;
+  width: 80%;
 }

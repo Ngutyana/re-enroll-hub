@@ -1,37 +1,41 @@
 <!--Navigation bar-->
 <div class="navbar">
-  <h3><a (click)="selectTab('')" routerLink="/">ReEnroll Hub</a></h3>
-  <ul>
-    <li [ngClass]="{ 'active': selectedTab === 'home' }">
-      <a (click)="selectTab('home')" routerLink="home">
+  <h3><a (click)="selectTab('')" routerLink="/"><span class="reEnrol">ReEnroll Hub</span></a></h3>
+  <div class="container">
+    <div class="container-2">
+      <ul>
+        <li [ngClass]="{ 'active': selectedTab === 'home' }">
+          <a (click)="selectTab('home')" routerLink="home">
         <span>
           <img src="../assets/icons/house.svg">
         </span>
-      </a>
-    </li>
-    <li [ngClass]="{ 'active': selectedTab === 'messages' }">
-      <a (click)="selectTab('messages')" routerLink="messages">
+          </a>
+        </li>
+        <li [ngClass]="{ 'active': selectedTab === 'messages' }">
+          <a (click)="selectTab('messages')" routerLink="messages">
          <span>
           <img src="../assets/icons/chat-dots.svg">
         </span>
-      </a>
-    </li>
-    <li [ngClass]="{ 'active': selectedTab === 'progress' }">
-      <a (click)="selectTab('progress')" routerLink="progress">
+          </a>
+        </li>
+        <li [ngClass]="{ 'active': selectedTab === 'progress' }">
+          <a (click)="selectTab('progress')" routerLink="progress">
         <span>
           <img src="../assets/icons/star.svg">
         </span>
-      </a>
-    </li>
-    <li [ngClass]="{ 'active': selectedTab === 'settings' }">
-      <a (click)="selectTab('settings')" routerLink="settings">
+          </a>
+        </li>
+        <li [ngClass]="{ 'active': selectedTab === 'settings' }">
+          <a (click)="selectTab('settings')" routerLink="settings">
         <span>
           <img src="../assets/icons/gear.svg">
         </span>
-      </a>
-    </li>
-  </ul>
+          </a>
+        </li>
+      </ul>
+    </div>
     <span (click)="toggleSign()" >
       <img src="../assets/icons/person-gear.svg">
     </span>
+  </div>
 </div>

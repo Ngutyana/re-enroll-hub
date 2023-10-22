@@ -4,15 +4,19 @@ h3 {
 }
 
 ul {
-  margin-right: 3rem;
+  margin-right: 5rem;
+  margin-left: 10rem;
+  display: flex;
 }
 
 .navbar {
-  background-color: #817d7d;
+  background-color: #ff7d33;
   overflow: hidden;
+  padding: 0;
 }
 
 .navbar ul {
+  background-color: #dadada;
   list-style-type: none;
   padding: 0;
   text-align: center;
@@ -28,13 +32,75 @@ ul {
   color: #0c0c0c;
   font-weight: bold;
   font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .navbar ul li.active a {
   color: #fff;
 }
 
-span {
-  margin-right: 2rem;
+.reEnrol{
+  font-size: 40px;
+  font-weight: bolder;
 }
 
+.navbar a:hover {
+  color: #ffffff;
+  width: 100%;
+}
+
+span {
+  margin-right: 4rem;
+  margin-left: 1rem;
+}
+
+/* Active tab indicator */
+.navbar ul li.active:after {
+  content: "";
+  display: block;
+  background-color: #0c0c0c; /* Active tab indicator color */
+  height: 2px; /* Height of the indicator */
+  width: 75px; /* Width of the indicator */
+  position: absolute;
+  align-content: center;
+}
+
+
+.container {
+  padding: 18px;
+  background: #dadada;
+  text-align: center;
+  border-radius: 0;
+  width: 100%;
+}
+
+
+/* Styles for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  .container-2 {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as needed to avoid overlapping with the header */
+    left: 0;
+    background-color: #333;
+    width: 100%;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li {
+    margin: 10px;
+  }
+
+  .container span {
+    display: block;
+  }
+}

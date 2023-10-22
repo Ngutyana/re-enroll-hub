@@ -1,22 +1,23 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #fff;
   margin: 0;
   padding: 0;
 }
 
 .container-application {
-  background-color: #ffffff;
-  padding: 30px;
+  background-color: #f7f7f7;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   margin: 50px auto;
-  width: 80%;
+  width: 60%;
 }
 
 h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .form-group {
@@ -44,11 +45,19 @@ h2 {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #ff7d33;
   color: #ffffff;
 }
 
+.btn-primary:hover {
+  background: #ff5733;
+}
+
 .btn-danger {
-  background-color: #dc3545;
+  background-color: #ff5733;
   color: #ffffff;
+}
+
+.btn-danger:hover{
+  background: #ff7d33;
 }

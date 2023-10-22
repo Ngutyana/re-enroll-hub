@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2in;
+  padding-bottom: 10px;
+  padding-top: 20px;
 }
 
 .status-step {
@@ -15,7 +16,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #3498db;
+  background-color: #dadada;
   margin-bottom: 10px;
   margin-right: 1in;
   display: flex;
@@ -25,8 +26,8 @@
   font-weight: bold;
 }
 
-.circle.active {
-  background-color: #27ae60;
+.active .circle{
+  background-color: #ff5733;
 }
 
 .text {
@@ -35,6 +36,23 @@
 }
 
 .active .text {
+  font-weight:bold;
+  color: #ff5733;
+}
+
+.container-application {
+  background-color: #f7f7f7;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  width: 60%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 2px;
   font-weight: bold;
-  color: #27ae60;
+
 }

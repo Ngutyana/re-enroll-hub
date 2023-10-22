@@ -1,12 +1,22 @@
 h4 {
-  width: 80%;
-  margin: 2rem auto 0;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-align: center;
 }
 
-p {
-  width: 80%;
-  margin: 0 auto;
+.img {
+  width: 150px;
+  height: auto;
+  padding-left: 10px;
 }
+.container-fluid h6{
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+}
+
 
 button {
   width: 40%;
@@ -14,7 +24,18 @@ button {
   margin-left: 1em;
 }
 
-img {
-  width: 2in;
-  height: 1.25in;
+.container-about{
+  max-width: 800px;
+  margin: 2px auto;
+  margin-top: 30px;
+  padding: 50px;
+  background: #f7f7f7;
+  align-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.container-about p{
+  color: black;
+  text-align: justify;
 }

@@ -2,7 +2,8 @@
   <!--Student profile-->
   <div class="profile-card">
     <img [src]="getLogo()" alt="University" class="profile-picture">
-    <div class="container-fluid">
+
+    <div class="container-fluid-intro">
       <h6 class="user-name">{{student.name}} {{student.surname}}</h6>
       <h6 class="email">{{student.email}}</h6>
     </div>
@@ -73,7 +74,7 @@
     </div>
 
     <div class="container-app-input">
-      <label class="custom-file-upload fixed-width-label">Attach all supporting documents here:
+      <label class="custom-file-upload" class="fixed-width-label">Attach all supporting documents here:
         <input type="file" id="file" name="file" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx, .txt">
       </label>
     </div>
@@ -87,8 +88,8 @@
 <ng-template #notAllowed>
   <div class="container-fluid  not-allowed-container">
     <div class="not-allowed-content">
-      <p>You submitted application is still under process.</p>
-      <h6>Check out the progress to be be updated with the outcome and also keep an eye on notifications.</h6>
+      <p>You submitted application is still on process.</p>
+      <h6>Check out the progress page for any updates regarding your application.</h6>
     </div>
   </div>
 </ng-template>
