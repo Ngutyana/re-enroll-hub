@@ -30,7 +30,7 @@
       <h2>Create an Account</h2>
       <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
         <div class="form-group">
-          <label for="university" class="fixed-width-label">Select University</label>
+          <label for="university" class="fixed-width-label"></label>
           <select id="university" name="university" [(ngModel)]="registerModel.university" required>
             <option value="" disabled selected>Select University</option>
             <option *ngFor="let university of universities" [value]=university>{{ university }}</option>
